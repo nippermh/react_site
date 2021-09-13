@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const ContactContainer = styled.div`
-    height: 692px;
-    background: #0c0c0c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-    height: 800px;
-    position: relative;
+export const Container = styled.div`
+    min-height: 692px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
     z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(
+        108deg,
+        rgba(1, 147, 86, 1)
+0%,
+rgba(10, 201, 122, 1) 100%); 
 `;
 
-export const ContactFormWrap = styled.div`
+export const FormWrap = styled.div`
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -23,7 +27,7 @@ export const ContactFormWrap = styled.div`
             height: 80%;
         }
 `;
-export const ContactIcon = styled(Link)`
+export const Icon = styled(Link)`
         margin-left: 32px;
         margin-top: 32px;
         text-decoration: none;
@@ -38,7 +42,7 @@ export const ContactIcon = styled(Link)`
         
 `;
 
-export const ContactFormContent = styled.div`
+export const FormContent = styled.div`
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -49,7 +53,7 @@ export const ContactFormContent = styled.div`
         }
 `;
 
-export const ContactForm = styled.form`
+export const Form = styled.form`
         background: #010101;
         max-width: 400px;
         height: auto;
@@ -66,7 +70,7 @@ export const ContactForm = styled.form`
         }
 `;
 
-export const ContactFormH1 = styled.h1`
+export const FormH1 = styled.h1`
         margin-bottom: 40px;
         color: #fff;
         font-size: 20px;
@@ -74,20 +78,20 @@ export const ContactFormH1 = styled.h1`
         text-align: center;
 `;
 
-export const ContactFormLabel = styled.label`
+export const FormLabel = styled.label`
         margin-bottom: 8px;
         font-size: 14px;
         color: #fff;
 `;
 
-export const ContactFormInput = styled.input`
+export const FormInput = styled.input`
         padding: 16px 16px;
         margin-bottom: 32px;
         border: none;
         border-radius: 4px;
 `;
 
-export const ContactFormButton = styled.button`
+export const FormButton = styled.button`
         background: #01bf71;
         padding: 16px 0;
         border: none;
@@ -97,18 +101,9 @@ export const ContactFormButton = styled.button`
         cursor: pointer;
 `;
 
-export const ContactTextArea = styled.textarea`
-    padding: 16px 16px;
-    margin-bottom: 32px;
-    border: none;
-    border-radius: 4px;
-`;
-
-export const ContactText = styled.span`
+export const Text = styled.span`
     text-align: center;
     margin-top: 24px;
     color: #fff;
     font-size: 14px;
 `;
-
-
