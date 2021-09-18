@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import React from 'react';
 //npm install emailjs-com --save
 import { ContactContainer, 
         ContactFormH1, 
@@ -10,30 +10,42 @@ import { ContactContainer,
         ContactFormLabel,
         ContactFormInput,
         ContactFormButton,
-        ContactText,
-        ContactTextArea
+        ContactTextArea,
+        ContactMessageSuccess
     
     } from './ContactElements';
 
-const Contact = () => {
+    const Result =() =>{
+        return(
+            <p>Your Message Has been successfully sent. I will contact you soon.</p>
+        );
+    };
 
-    function sendEmail(e) {
+function Contact(props) {
+    const [result,showResult] = useState(false);
+    const sendEmail =(e) => {
         e.preventDefault();
     
-        emailjs.sendForm('gmail', 'template_ee563yo', e.target, 'user_0jebchz3s8ncQm5vUuqVg')
+        emailjs.sendForm('service_tdmzndj', 'template_ee563yo', e.target, 'user_0jebchz3s8ncQm5vUuqVg')
           .then((result) => {
-              console.log(result.text);
+           console.log(result.text);
           }, (error) => {
               console.log(error.text);
           });
           e.target.reset()
-    }
+          showResult(true);
+    };
+
+    //hide result
+    setTimeout(() => {
+        showResult(false);
+    }, 5000);
 
     return (
         <>
-          <ContactContainer id="contact">
-              <ContactFormWrap>
-                <ContactIcon to="/">Sophie Hallam</ContactIcon>
+          <ContactContainer id="contact" className="contactSection">
+              <ContactFormWrap className="formWrap">
+                <ContactIcon to="/"></ContactIcon>
                 <ContactFormContent>
                 <ContactForm onSubmit={sendEmail}>
                         <ContactFormH1 htmlFor='for'>
@@ -48,21 +60,18 @@ const Contact = () => {
                         <ContactFormLabel htmlFor='for'>
                             Your Email *
                         </ContactFormLabel>
-                        <ContactFormInput type='email' required placeholder="Your email address" name="email" />
-                        <ContactFormLabel htmlFor='For'>
-                            Subject of Email *
-                        </ContactFormLabel>
-                        <ContactFormInput type='text' required placeholder="What your message is about" name="Subject" />
+                        <ContactFormInput type='email' required placeholder="Your email address" name="user_email" />
+                      
                         <ContactFormLabel htmlFor='for'>
                             Your message *
                             </ContactFormLabel>
-                        <ContactTextArea type='textarea' cols='30' required placeholder="Enter your message" name="message"></ContactTextArea>
+                        <ContactTextArea type='textarea' rows='10' required placeholder="Enter your message" name="message"></ContactTextArea>
 
                         <ContactFormButton type='submit' value="send">
                             Send Message
                             </ContactFormButton>
 
-                        <ContactText>Forgot password</ContactText>
+                        <ContactMessageSuccess className="result">{result ? <Result/> : null}</ContactMessageSuccess>
                     </ContactForm>
                 </ContactFormContent>
               </ContactFormWrap>

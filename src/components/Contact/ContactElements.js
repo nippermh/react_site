@@ -2,19 +2,22 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ContactContainer = styled.div`
-    height: 692px;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     background: #0c0c0c;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
-    height: 800px;
+
+
     position: relative;
     z-index: 0;
 `;
 
 export const ContactFormWrap = styled.div`
         height: 100%;
+        max-width: 1100px;
+        min-width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -50,8 +53,8 @@ export const ContactFormContent = styled.div`
 `;
 
 export const ContactForm = styled.form`
-        background: #010101;
-        max-width: 400px;
+        background: #A9A9A9; //grey
+        max-width: 500px;
         height: auto;
         width: 100%;
         z-index: 1;
@@ -111,4 +114,7 @@ export const ContactText = styled.span`
     font-size: 14px;
 `;
 
+export const ContactMessageSuccess = styled.div`
+        color: #00FF00;
 
+`;
