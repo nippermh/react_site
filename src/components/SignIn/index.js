@@ -1,4 +1,6 @@
 import React from 'react';
+import { AiOutlineClose } from "react-icons/ai";
+//import MailchimpSubscribe from "react-mailchimp-subscribe";
 import {
     Container,
     FormWrap,
@@ -8,33 +10,71 @@ import {
     FormH1,
     FormLabel,
     FormInput,
-    FormButton,
-    Text
+    FormButton
 } from './SigninElements';
+
+/* const CustomForm = ({ status, message, onValidated }) => {
+
+    const [email, setEmail] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState(''); */
+
 
 const SignIn = () => {
     return (
         <>
           <Container>
               <FormWrap>
-                <Icon to="/">Sophie Hallam</Icon>
+                <Icon to="/"><AiOutlineClose /></Icon>
                 <FormContent>
-                <Form action="#">
-                        <FormH1>
-                            Sign in to your account
+                <Form action="#" className="mc__form">
+                        <FormH1  className="mc__title">
+                            Get News and Updates
                         </FormH1>
+                        <FormLabel htmlFor='for'>
+                            First Name
+                            </FormLabel>
+                        <FormInput 
+                            /*  label="First Name"
+                           onChangeHandler={setFirstName}
+                            type="text"
+                            value={firstName}
+                            placeholder="Jane" */
+                            isRequired
+                        />
+
+                        <FormLabel htmlFor='for'>
+                            Last Name
+                            </FormLabel>
+                        <FormInput 
+                           /*  label="Last Name"
+                             onChangeHandler={setLastName}
+                             type="text"
+                             value={lastName}
+                             placeholder="Doe"
+                             isRequired */
+                        />
+                        
                         <FormLabel htmlFor='for'>
                             Email
                         </FormLabel>
-                        <FormInput type='email' required />
-                        <FormLabel htmlFor='for'>
-                            Password
-                            </FormLabel>
-                        <FormInput type='password' required />
-                        <FormButton type='submit'>
+                        <FormInput 
+                           /*  label="Email"
+                            onChangeHandler={setEmail}
+                            type="email"
+                            value={email}
+                            placeholder="your@email.com"
+                            isRequired */
+                        />
+                       
+                        <FormButton 
+                            // label="subscribe"
+                             type="submit"
+                            // formValues={[email, firstName, lastName]}
+                        >
                             Continue
                             </FormButton>
-                        <Text>Forgot password</Text>
+                       
                     </Form>
                 </FormContent>
               </FormWrap>

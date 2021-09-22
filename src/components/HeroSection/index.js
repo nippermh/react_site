@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Video from '../videos/video.mp4';
+import Video from '../videos/seaofclouds.mp4';
 import { Button } from '../ButtonElements';
 import { 
     HeroContainer, 
@@ -25,9 +25,8 @@ const HeroSection = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Virtual Banking Made Easy</HeroH1>
-                <HeroP>Sign up for a new account and receive 
-                    $250 in credit towards your next payment.
+                <HeroH1>Adrian Hallam</HeroH1>
+                <HeroP>Composer, singer-songwriter from the mid north coast of Oz.
                     </HeroP>
                     <HeroBtnWrapper>
                         <Button to="signup" onMouseEnter={onHover} 
