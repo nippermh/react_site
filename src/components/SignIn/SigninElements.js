@@ -28,6 +28,9 @@ export const FormWrap = styled.div`
         }
 `;
 export const Icon = styled(Link)`
+        position: absolute;
+        top: 0;
+        right: 30px;
         margin-left: 32px;
         margin-top: 32px;
         text-decoration: none;
