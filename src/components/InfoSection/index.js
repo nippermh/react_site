@@ -19,7 +19,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkT
 return (
         <>
           <InfoContainer lightBg={lightBg} id={id}>
-              <InfoWrapper>
+              <InfoWrapper className="wrapper">
                   <InfoRow imgStart={imgStart}>
                       <Column1>
                       <TextWrapper>
