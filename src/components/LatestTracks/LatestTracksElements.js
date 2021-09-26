@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InfoContainer = styled.div`
+export const LatestTracksContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')}
 ;
@@ -11,7 +11,7 @@ export const InfoContainer = styled.div`
 
 `;
 
-export const InfoWrapper = styled.div`
+export const LatestTracksWrapper = styled.div`
     display: grid;
     z-index: 1;
     height 860px;
