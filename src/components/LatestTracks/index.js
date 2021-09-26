@@ -4,6 +4,7 @@ import {
     LatestTracksContainer,
     LatestTracksWrapper,
     LatestTracksCard,
+    LatestTracksH1,
     LatestTracksH2,
     LatestTracksP
   
@@ -13,6 +14,7 @@ const LatestTracks = () => {
     return (
         <>
            <LatestTracksContainer>
+           <LatestTracksH1>Our Services</LatestTracksH1>
               <LatestTracksWrapper>
 
                   <LatestTracksCard>
@@ -22,8 +24,8 @@ const LatestTracks = () => {
                 
                     <ReactPlayer 
                         url= {'https://soundcloud.com/adrianhallam/telegram'} 
-                        width='100%'
-                        height='100%'
+                        width='160px'
+                        height='160px'
                         
                         />
 
@@ -36,8 +38,8 @@ const LatestTracks = () => {
                 
                     <ReactPlayer 
                         url= {'https://soundcloud.com/adrianhallam/telegram'} 
-                        width='100%'
-                        height='100%'
+                        width='160px'
+                        height='160px'
                         
                         />
 
@@ -55,8 +57,8 @@ Hope you enjoy, and thanks for listening/feedback :)</LatestTracksP>
                 
                     <ReactPlayer 
                         url= {'https://soundcloud.com/adrianhallam/space-out'} 
-                        width='100%'
-                        height='100%'
+                        width='160px'
+                        height='160px'
                         
                         />
 
